@@ -93,12 +93,12 @@ boxClick2(div3, 'кубік - 3');
 document.getElementById('but1').addEventListener('click', (e) => {
     e.preventDefault()
     const formData = new FormData(form)
-
+    const form = document.forms.namedItem('myFormAPI')
     const formRes = {}
 
     formData.forEach((i, y) => {
         formRes[y] = i
     });
-
+    console.log(formRes)
 });
-console.log(formRes)
+
